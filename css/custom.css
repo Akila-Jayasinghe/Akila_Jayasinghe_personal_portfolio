@@ -1,0 +1,638 @@
+/* Custom Enhancements for Portfolio */
+
+/* ==========================================
+   HERO SECTION STATIC BUTTONS
+   ========================================== */
+.hero-buttons-static {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-buttons-static p {
+  pointer-events: auto;
+  margin-bottom: 0;
+}
+
+.hero-buttons-static .btn {
+  pointer-events: auto;
+}
+
+/* Responsive adjustments for static buttons */
+@media (max-width: 991px) {
+  .hero-buttons-static {
+    bottom: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-buttons-static {
+    bottom: 60px;
+  }
+
+  .hero-buttons-static .btn {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   THEME TOGGLE
+   ========================================== */
+.theme-toggle {
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: inherit;
+  padding: 0.5rem 1rem !important;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.15);
+}
+
+.theme-toggle:focus {
+  outline: 2px solid #ffbd39;
+  outline-offset: 2px;
+}
+
+.theme-toggle .theme-icon {
+  font-size: 18px;
+  display: inline-block;
+  filter: drop-shadow(0 0 2px rgba(255, 189, 57, 0.5));
+}
+
+/* ==========================================
+   CONTACT FORM STYLING
+   ========================================== */
+.contact-form {
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Enhanced Form Input Styling */
+.contact-form .form-control {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 15px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffbd39;
+  background-color: #fffef8;
+  box-shadow: 0 0 0 4px rgba(255, 189, 57, 0.1);
+  outline: none;
+}
+
+.contact-form .form-control::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+.contact-form textarea.form-control {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Form Button Styling */
+.contact-form .btn-primary {
+  background: #ffbd39;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 189, 57, 0.3);
+}
+
+.contact-form .btn-primary:hover {
+  background: #e6a830;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 189, 57, 0.4);
+}
+
+.contact-form .btn-primary:active {
+  transform: translateY(0);
+}
+
+.contact-form .btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form Messages Styling */
+#form-messages .alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#form-messages .alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+#form-messages .alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+#form-messages .alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Contact Info Box Styling */
+.contact-info-box {
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px !important;
+}
+
+.contact-info-box h3 {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.contact-info-box p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.contact-info-box strong {
+  color: #000;
+  font-weight: 600;
+  min-width: 135px;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.contact-info-box p span {
+  flex: 1;
+}
+
+/* Dark Mode Adjustments for Contact Form */
+[data-theme="dark"] .contact-form {
+  background-color: #1a1a1a !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .contact-form h3 {
+  color: #ffbd39;
+}
+
+[data-theme="dark"] .contact-form .form-control {
+  background-color: #2a2a2a;
+  border-color: #404040;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .contact-form .form-control:focus {
+  background-color: #333333;
+  border-color: #ffbd39;
+  box-shadow: 0 0 0 4px rgba(255, 189, 57, 0.15);
+}
+
+[data-theme="dark"] .contact-form .form-control::placeholder {
+  color: #888;
+}
+
+[data-theme="dark"] .contact-info-box {
+  background-color: #1a1a1a !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .contact-info-box h3 {
+  color: #ffbd39;
+}
+
+[data-theme="dark"] .contact-info-box p {
+  color: #bbb;
+}
+
+[data-theme="dark"] .contact-info-box strong {
+  color: #ffbd39;
+}
+
+/* ==========================================
+   BACK TO TOP BUTTON
+   ========================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffbd39;
+  border: none;
+  color: #000;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 189, 57, 0.4);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 189, 57, 0.6);
+}
+
+/* ==========================================
+   SKIP TO CONTENT LINK (Accessibility)
+   ========================================== */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #ffbd39;
+  color: #000;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 10000;
+  font-weight: 600;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ==========================================
+   LIGHT MODE THEME
+   ========================================== */
+body[data-theme="light"] {
+  background: #ffffff;
+  color: #333333;
+}
+
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] h4,
+body[data-theme="light"] h5,
+body[data-theme="light"] h6 {
+  color: #000000;
+}
+
+body[data-theme="light"] .ftco-navbar-light {
+  background: #ffffff !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="light"]
+  .ftco-navbar-light
+  .navbar-nav
+  > .nav-item
+  > .nav-link {
+  color: #000000;
+}
+
+body[data-theme="light"] .ftco-section {
+  background: #f8f9fa;
+}
+
+body[data-theme="light"] .ftco-about ul.about-info li span:first-child {
+  color: #000000;
+}
+
+body[data-theme="light"] .resume-wrap,
+body[data-theme="light"] .services-1,
+body[data-theme="light"] .project {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+body[data-theme="light"] .progress {
+  background: #e0e0e0;
+}
+
+body[data-theme="light"] .ftco-footer {
+  background: #2c2c2c;
+}
+
+body[data-theme="light"] .contact-section .box {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* ==========================================
+   FORM IMPROVEMENTS
+   ========================================== */
+.contact-form {
+  border-radius: 10px;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #ffbd39;
+  box-shadow: 0 0 0 0.2rem rgba(255, 189, 57, 0.25);
+}
+
+#form-messages .alert {
+  border-radius: 5px;
+  animation: slideInDown 0.3s ease;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   IMPROVED PROGRESS BARS
+   ========================================== */
+.progress-bar span {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* ==========================================
+   TESTIMONIAL IMPROVEMENTS
+   ========================================== */
+.testimony-wrap {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.testimony-wrap:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.testimony-wrap .user-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.testimony-wrap .quote {
+  width: 40px;
+  height: 40px;
+  background: #ffbd39;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimony-wrap .name {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.testimony-wrap .position {
+  color: #ffbd39;
+  font-size: 14px;
+}
+
+/* ==========================================
+   BLOG SECTION IMPROVEMENTS
+   ========================================== */
+.blog-entry {
+  transition: all 0.3s ease;
+}
+
+.blog-entry:hover {
+  transform: translateY(-10px);
+}
+
+.blog-entry .block-20 {
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.blog-entry .text {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.blog-entry .topp {
+  background: #ffbd39;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.blog-entry .day {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.blog-entry .mos,
+.blog-entry .yr {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVENESS
+   ========================================== */
+@media (max-width: 767px) {
+  .theme-toggle,
+  .back-to-top {
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .theme-toggle {
+    top: 80px;
+  }
+
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ========================================== */
+*:focus {
+  outline: 2px solid #ffbd39;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+
+  .btn-primary {
+    border: 3px solid #ffbd39;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================
+   LOADING STATES
+   ========================================== */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   IMPROVED SHADOWS AND DEPTH
+   ========================================== */
+.project,
+.resume-wrap,
+.services-1,
+.blog-entry,
+.contact-section .box {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="light"] .project,
+body[data-theme="light"] .resume-wrap,
+body[data-theme="light"] .services-1,
+body[data-theme="light"] .blog-entry,
+body[data-theme="light"] .contact-section .box {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   PROJECT CARDS WITH EXPANDABLE LINKS
+   ========================================== */
+.project-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-type {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.badge-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.badge-info {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.badge-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.project-links {
+  padding: 15px;
+  background: rgba(255, 189, 57, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid #ffbd39;
+}
+
+.project-links .btn {
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-links .btn:hover {
+  transform: translateX(5px);
+}
+
+.toggle-links {
+  color: #ffbd39;
+  font-weight: 600;
+  padding: 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.toggle-links:hover {
+  color: #e0a732;
+  text-decoration: none;
+}
